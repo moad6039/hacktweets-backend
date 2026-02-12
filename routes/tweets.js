@@ -3,7 +3,7 @@ var router = express.Router();
 var Tweet = require("../models/tweets")
 
 /* GET all tweets */
-router.get('/tweets', function(req, res, next) {
+router.get('/', function(req, res, next) {
     Tweet.find()
     .then((tweet) => res.json({tweet: tweet}))
 });
