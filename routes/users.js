@@ -1,9 +1,5 @@
 var express = require("express");
 var router = express.Router();
-<<<<<<< HEAD
-=======
-
->>>>>>> 1db15a8501177adb0d94ca3bd1154a3982068f4f
 require("../models/connection");
 const { checkBody } = require("../modules/checkBody");
 const User = require("../models/users");
