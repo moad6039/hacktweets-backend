@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", tweetRouter);
+app.use("/tweets", tweetRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
