@@ -1,19 +1,10 @@
 var express = require("express");
 var router = express.Router();
-<<<<<<< HEAD
-const User = require("../models/users");
-const fetch = require('node-fetch');
-const { checkBody } = require('../modules/checkBody')
-=======
->>>>>>> c775bae810c98a6a9418e9b14a1fa8eccd2d0a72
-
 require("../models/connection");
 const { checkBody } = require("../modules/checkBody");
 const User = require("../models/users");
 const fetch = require("node-fetch");
-
 const uid2 = require("uid2");
-
 const bcrypt = require("bcrypt");
 
 /* Post users signup */

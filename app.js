@@ -7,7 +7,7 @@ var logger = require("morgan");
 
 require("./models/connection");
 
-var indexRouter = require("./routes/index");
+var tweetRouter = require("./routes/tweets");
 var usersRouter = require('./routes/users');
 
 var app = express();
@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/", indexRouter);
+app.use("/", tweetRouter);
 app.use('/users', usersRouter);
 
 module.exports = app;
