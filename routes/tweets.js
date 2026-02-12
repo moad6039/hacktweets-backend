@@ -5,7 +5,8 @@ var Tweet = require("../models/tweets")
 /* GET all tweets */
 router.get('/', function(req, res, next) {
     Tweet.find()
-    .populate('users', 'hashtags')
+    .populate('user')
+    .populate('hashtag')
     .then((tweet) => res.json({tweet: tweet}))
 });
 
