@@ -1,5 +1,9 @@
 var express = require("express");
 var router = express.Router();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1db15a8501177adb0d94ca3bd1154a3982068f4f
 require("../models/connection");
 const { checkBody } = require("../modules/checkBody");
 const User = require("../models/users");
@@ -17,7 +21,7 @@ router.post("/signup", (req, res) => {
   // Check if the user has not already been registered
   User.findOne({ username: req.body.username }).then((data) => {
     if (data === null) {
-      const hash = bcrypt.hashSync(req.body.password, );
+      const hash = bcrypt.hashSync(req.body.password,10 );
       const newUser = new User({
         firstname: req.body.firstname,
         username: req.body.username,
